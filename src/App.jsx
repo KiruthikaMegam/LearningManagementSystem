@@ -60,7 +60,7 @@ function App() {
             <Route path="/my-courses" element={<ProtectedRoute role="student"><MyCourses /></ProtectedRoute>} />
             <Route path="/lesson/:courseId/:lessonId" element={<ProtectedRoute role="student"><LessonViewer /></ProtectedRoute>} />
             <Route path="/quiz/:courseId" element={<ProtectedRoute role="student"><Quiz /></ProtectedRoute>} />
-            <Route path="/enrollment" element={<Navigate to="/courses" replace />} />
+            <Route path="/enrollment" element={<Enrollment />} />
             <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
 
             <Route path="/admin-dashboard" element={<ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute>} />
