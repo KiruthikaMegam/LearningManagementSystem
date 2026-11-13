@@ -55,7 +55,7 @@ export default function Hero() {
 
           <div className="hero-image-content">
             <img
-              src="/assets/hero-training.jpg"
+              src="https://ellenkicet.ac.in/wp-content/uploads/2025/01/education.jpg"
               alt="Students learning technology"
             />
 

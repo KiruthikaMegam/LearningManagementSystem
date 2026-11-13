@@ -10,7 +10,7 @@ export const initialCourses = [
     rating: 4.8,
     students: 1250,
     mode: ["Online", "Offline"],
-    image: "/assets/java.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdZbn3EOtaxKPmHwEUe1-wI7BnwsahU81Ki3r5BxuDJg&s=10/assets/java.jpg",
     shortDescription: "Learn Java, Spring Boot, SQL and modern frontend development.",
     description: "Become a professional Java Full Stack Developer by learning frontend, backend, database and real-world application development.",
     instructor: {
@@ -40,7 +40,7 @@ export const initialCourses = [
     rating: 4.7,
     students: 980,
     mode: ["Online", "Offline"],
-    image: "/assets/python.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwp0ByEafVOJfFCRT-5Sp04ZU6WegszGZYns98lMs-DQ&s=10",
     shortDescription: "Master Python, Django, databases and frontend development.",
     description: "Learn to build complete web applications using Python, Django, HTML, CSS, JavaScript and databases.",
     instructor: {
@@ -69,7 +69,7 @@ export const initialCourses = [
     rating: 4.9,
     students: 1450,
     mode: ["Online", "Offline"],
-    image: "/assets/testing.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSUjzCiU6oTW5Cx3hTC-y0bqEm5QYdKQCUPSg_OXONLQ&s=10",
     shortDescription: "Learn manual testing, automation testing and Selenium.",
     description: "Understand software testing concepts, test cases, bug tracking, automation testing and Selenium tools.",
     instructor: {
@@ -98,7 +98,7 @@ export const initialCourses = [
     rating: 4.8,
     students: 870,
     mode: ["Online", "Offline"],
-    image: "/assets/react.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbvBRa5Jy2UYJa-OFmz2oQjm8lNiOZE6MoGE1tXE2aVg&s=10",
     shortDescription: "Build modern websites using React JS and JavaScript.",
     description: "Learn React components, hooks, routing, state management, API integration and responsive frontend development.",
     instructor: {
@@ -127,7 +127,7 @@ export const initialCourses = [
     rating: 4.6,
     students: 760,
     mode: ["Online", "Offline"],
-    image: "/assets/datascience.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5aaUfJep3qGTF4_xnKa_mEDXOPFFsXZT28S0NgcLjtw&s=10",
     shortDescription: "Explore Python, data analysis and machine learning.",
     description: "Develop data science skills through Python programming, data visualization, statistics and machine learning.",
     instructor: {
@@ -156,7 +156,7 @@ export const initialCourses = [
     rating: 4.7,
     students: 650,
     mode: ["Online", "Offline"],
-    image: "/assets/uiux.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdtrLiMQlWXSILUj_gUuYR-QaXpP7xKw1uNKM5wNebyQ&s=10",
     shortDescription: "Learn user interface and user experience design.",
     description: "Understand design principles, wireframing, prototyping and user experience using professional design tools.",
     instructor: {
