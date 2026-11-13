@@ -108,6 +108,130 @@ export default function Enrollment() {
     );
   }
 
+  // Main Enrollment page: show all enrollments when no course ID is in the URL.
+  if (!id) {
+    const myEnrollments = currentUser
+      ? enrollments.filter(
+          (item) => String(item.studentId) === String(currentUser.id)
+        )
+      : [];
+
+    return (
+      <div className="enrollment-page">
+        <div className="enrollment-container">
+          <div className="enrollment-heading">
+            <span>MY LEARNING</span>
+            <h1>My Enrollments</h1>
+            <p>View your course enrollment and payment details.</p>
+          </div>
+
+          {!currentUser ? (
+            <div className="enrollment-form-card" style={{ textAlign: "center" }}>
+              <h2>Please login to view your enrollments</h2>
+              <p>Login with your student account to continue.</p>
+              <button className="continue-button" onClick={() => navigate("/login")}>
+                Login
+              </button>
+            </div>
+          ) : myEnrollments.length === 0 ? (
+            <div className="enrollment-form-card" style={{ textAlign: "center", padding: "50px 25px" }}>
+              <div style={{ fontSize: "48px", marginBottom: "15px" }}>📚</div>
+              <h2>No Enrollments Yet</h2>
+              <p>You have not enrolled in any courses. Explore our courses and start learning.</p>
+              <button className="continue-button" onClick={() => navigate("/courses")}>
+                Browse Courses
+              </button>
+            </div>
+          ) : (
+            <div style={{ display: "grid", gap: "22px" }}>
+              {myEnrollments.map((item) => {
+                const enrolledCourse = courses.find(
+                  (courseItem) => String(courseItem.id) === String(item.courseId)
+                );
+
+                if (!enrolledCourse) return null;
+
+                const isPaid = item.paymentStatus === "Paid";
+                const courseProgress = isPaid
+                  ? getCourseProgress(currentUser.id, enrolledCourse.id)
+                  : 0;
+
+                return (
+                  <div className="my-enrolled-card" key={item.id}>
+                    <img
+                      src={enrolledCourse.image}
+                      alt={enrolledCourse.title}
+                      className="my-enrolled-image"
+                    />
+                    <div className="my-enrolled-content">
+                      <span className="enrollment-category">{enrolledCourse.category}</span>
+                      <h2>{enrolledCourse.title}</h2>
+                      <p>{enrolledCourse.shortDescription}</p>
+
+                      <div className="enrolled-status-row">
+                        <span>Enrollment Status</span>
+                        <strong className={isPaid ? "paid-status" : ""}>
+                          {isPaid ? "Enrolled" : "Pending Payment"}
+                        </strong>
+                      </div>
+                      <div className="enrolled-status-row">
+                        <span>Payment Status</span>
+                        <strong className={isPaid ? "paid-status" : ""}>
+                          {isPaid ? "Paid" : "Pending"}
+                        </strong>
+                      </div>
+
+                      <div className="enrolled-status-row">
+                        <span>Course Fee</span>
+                        <strong>₹{Number(item.courseFee || enrolledCourse.fee || 0).toLocaleString("en-IN")}</strong>
+                      </div>
+
+                      {isPaid ? (
+                        <>
+                          <div className="enrolled-progress">
+                            <div className="progress-heading">
+                              <span>Course Progress</span>
+                              <strong>{courseProgress}%</strong>
+                            </div>
+                            <div className="progress-track">
+                              <div className="progress-fill" style={{ width: `${courseProgress}%` }}></div>
+                            </div>
+                          </div>
+                          <div className="enrolled-buttons">
+                            <button onClick={() => navigate("/my-courses")}>View My Courses</button>
+                            <button
+                              className="continue-button"
+                              onClick={() => {
+                                if (enrolledCourse.lessons?.length > 0) {
+                                  navigate(`/lesson/${enrolledCourse.id}/${enrolledCourse.lessons[0].id}`);
+                                } else {
+                                  navigate("/my-courses");
+                                }
+                              }}
+                            >
+                              Continue Learning
+                            </button>
+                          </div>
+                        </>
+                      ) : (
+                        <button
+                          className="continue-button"
+                          onClick={() => navigate(`/payment/${item.id}`)}
+                        >
+                          Continue to Payment
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
   if (!course) {
     return (
       <div className="enrollment-page">
