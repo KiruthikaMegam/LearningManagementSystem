@@ -1,0 +1,201 @@
+
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #ffffff;
+  padding: 28px 20px;
+  margin-top: -35px;
+  position: relative;
+  z-index: 2;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.stat-item {
+  text-align: center;
+  padding: 10px;
+  border-right: 1px solid #eeeeee;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-item h2 {
+  color: #e63832;
+  font-size: 29px;
+  margin-bottom: 7px;
+}
+
+.stat-item p {
+  color: #666666;
+  font-size: 13px;
+}
+
+.home-section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.home-section-heading span {
+  color: #e63832;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.home-section-heading h2 {
+  color: #172b4d;
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.home-section-heading p {
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.home-course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.home-center-btn {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.home-primary-btn,
+.home-cta-btn {
+  display: inline-block;
+  background: #e63832;
+  color: #ffffff;
+  padding: 13px 25px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.home-primary-btn:hover,
+.home-cta-btn:hover {
+  background: #bd2823;
+  transform: translateY(-2px);
+}
+
+.home-benefits {
+  background: #f7f8fb;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.benefit-card {
+  background: #ffffff;
+  padding: 28px 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #eeeeee;
+  transition: 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.benefit-icon {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  color: #172b4d;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  color: #777777;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.home-cta {
+  background: linear-gradient(120deg, #172b4d, #263f68);
+  text-align: center;
+  padding: 65px 20px;
+}
+
+.home-cta h2 {
+  color: #ffffff;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.home-cta p {
+  color: #e0e5ed;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.home-cta-btn {
+  background: #e63832;
+}
+
+@media (max-width: 900px) {
+  .home-course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .home-stats {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .stat-item:nth-child(1),
+  .stat-item:nth-child(2) {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .home-course-grid,
+  .benefits-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section-heading h2 {
+    font-size: 25px;
+  }
+
+  .home-cta h2 {
+    font-size: 24px;
+  }
+}

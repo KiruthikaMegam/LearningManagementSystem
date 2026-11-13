@@ -1,0 +1,262 @@
+
+.placements-banner {
+  background: linear-gradient(120deg, #172b4d, #263f68);
+  padding: 75px 0;
+  text-align: center;
+}
+
+.placements-banner span,
+.placement-heading span,
+.placement-eyebrow {
+  color: #ff7772;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.placements-banner h1 {
+  color: #ffffff;
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+.placements-banner p {
+  color: #e0e5ed;
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.placement-banner-btn,
+.placement-primary-btn,
+.placement-cta-btn {
+  display: inline-block;
+  background: #e63832;
+  color: #ffffff;
+  padding: 13px 23px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.placement-banner-btn:hover,
+.placement-primary-btn:hover,
+.placement-cta-btn:hover {
+  background: #c92520;
+  transform: translateY(-2px);
+}
+
+.placement-intro-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.placement-intro-layout h2 {
+  color: #172b4d;
+  font-size: 30px;
+  line-height: 1.4;
+  margin: 15px 0;
+}
+
+.placement-intro-layout p {
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 15px;
+}
+
+.placement-primary-btn {
+  margin-top: 10px;
+}
+
+.placement-intro-image {
+  min-height: 300px;
+  background: linear-gradient(135deg, #fce8e7, #e7edf7);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.placement-image-icon {
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+.placement-intro-image h3 {
+  color: #172b4d;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.placement-intro-image p {
+  color: #666666;
+  font-size: 13px;
+}
+
+.placement-features {
+  background: #f7f8fb;
+}
+
+.placement-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.placement-heading span {
+  color: #e63832;
+}
+
+.placement-heading h2 {
+  color: #172b4d;
+  font-size: 29px;
+  margin: 12px 0;
+}
+
+.placement-heading p {
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.placement-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.placement-feature-card {
+  background: #ffffff;
+  padding: 28px 20px;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.placement-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.placement-feature-card > div {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.placement-feature-card h3 {
+  color: #172b4d;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.placement-feature-card p {
+  color: #777777;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.placement-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.placement-step-card {
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  padding: 25px 20px;
+  background: #ffffff;
+}
+
+.placement-step-card > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: #fff0ef;
+  color: #e63832;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.placement-step-card h3 {
+  color: #172b4d;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.placement-step-card p {
+  color: #777777;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.placement-cta {
+  background: linear-gradient(120deg, #172b4d, #263f68);
+  text-align: center;
+  padding: 65px 20px;
+}
+
+.placement-cta h2 {
+  color: #ffffff;
+  font-size: 29px;
+  margin-bottom: 15px;
+}
+
+.placement-cta p {
+  color: #e0e5ed;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 900px) {
+  .placement-feature-grid,
+  .placement-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .placement-intro-layout {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .placements-banner {
+    padding: 50px 15px;
+  }
+
+  .placements-banner h1 {
+    font-size: 28px;
+  }
+
+  .placement-intro-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .placement-intro-layout h2 {
+    font-size: 25px;
+  }
+
+  .placement-feature-grid,
+  .placement-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .placement-heading h2,
+  .placement-cta h2 {
+    font-size: 24px;
+  }
+}
